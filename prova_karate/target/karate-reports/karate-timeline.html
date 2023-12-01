@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"GoRestAPI\/GoRest[1:8]","start":1701410057802,"end":1701410059376,"title":"GoRestAPI\/GoRest[1:8] 02:54:17.802-02:54:19.376 C1 - POST create a new user (Positive case)"},{"id":2,"group":1,"content":"GoRestAPI\/GoRest[2:15]","start":1701410059385,"end":1701410060507,"title":"GoRestAPI\/GoRest[2:15] 02:54:19.385-02:54:20.507 C2 - GET user details (Positive case)"},{"id":3,"group":1,"content":"GoRestAPI\/GoRest[3:22]","start":1701410060515,"end":1701410061672,"title":"GoRestAPI\/GoRest[3:22] 02:54:20.515-02:54:21.672 C3 - POST create a new post for a user (Positive case)"},{"id":4,"group":1,"content":"GoRestAPI\/GoRest[4:29]","start":1701410061679,"end":1701410062790,"title":"GoRestAPI\/GoRest[4:29] 02:54:21.679-02:54:22.790 C4 - PUT update a user's details (Positive case)"},{"id":5,"group":1,"content":"GoRestAPI\/GoRest[5:36]","start":1701410062796,"end":1701410063706,"title":"GoRestAPI\/GoRest[5:36] 02:54:22.796-02:54:23.706 C5 - POST create a new user with invalid email (Negative case)"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
