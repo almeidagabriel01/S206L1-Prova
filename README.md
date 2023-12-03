@@ -87,4 +87,4 @@ npx mochawesome-merge "cypress/reports/*.json" > mochawesome.json
 ```
 
 ## Autores
-Este projeto foi criado por Gabriel Almeida Dias, Vitor Oliveira Juliano de Almeida e Anna Clara Mendes Siqueira Rennó.
+Este projeto foi criado por Gabriel Almeida Dias, Vitor Oliveira Juliano de Almeida e Anna Clara Rennó.
