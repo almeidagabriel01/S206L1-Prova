@@ -15,7 +15,7 @@ describe('Criando cenario de Interface para o site globalsqa',()=>{
   
   })
 
-  it('Caso de teste: Fazer deposito de 200 reais usando o user do Ron Weasly e querer saca mais do que tem', ()=>{
+  it('Caso de teste: Fazer deposito de 200 reais usando o user do Ron Weasly e querer sacar mais do que tem', ()=>{
     cy.visit('https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login')
     cy.get('.borderM > :nth-child(1) > .btn').click()
     cy.get('#userSelect').select("Ron Weasly")
